@@ -30,7 +30,7 @@ public class Login implements ActionListener
       {
         f.setVisible(false);
           new Homepage();
-          //checking
+          //checking main aksjaskop-a
       }
 
    }  
