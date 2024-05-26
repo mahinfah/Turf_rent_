@@ -17,13 +17,8 @@ public class Login implements ActionListener
      dark_mode = new JButton("Dark mode");
      dark_mode.setBounds(550,200,100,40);
      f.add(dark_mode);
-
-     dark_mode.addActionListener(this);
-      f.setSize(700,600);
-      f.setLayout(null);
-      f.setVisible(true);
-      f.getContentPane().setBackground(mycolor);
-
+//starting
+     
     } 
     	
 	
