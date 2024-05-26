@@ -61,7 +61,7 @@ public class Homepage implements ActionListener {
 
      dark_mode.addActionListener(this);
      registration.addActionListener(this);
-     
+     signin.addActionListener(this);
      
      
      f.setSize(700,600);
@@ -92,6 +92,15 @@ public class Homepage implements ActionListener {
           f.setVisible(false);
             new userReg();
         }
+
+
+
+        if((e.getSource()).equals(signin))
+        {
+          f.setVisible(false);
+            new Login();
+        }
+
 
      }  
      

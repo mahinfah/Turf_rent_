@@ -62,7 +62,7 @@ public class Homepagedark implements ActionListener {
  
  
  
-     // dark_mode.addActionListener(this);
+    signin.addActionListener(this);
       registration.addActionListener(this);
       
 
@@ -97,6 +97,12 @@ public class Homepagedark implements ActionListener {
             new userReg();
 
         } 
+        
+        if((e.getSource()).equals(signin))
+        {
+          f.setVisible(false);
+            new Login();
+        }
         
      
     }
