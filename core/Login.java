@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public class Login implements ActionListener
+public class Login 
 {         private JFrame f;
            private JButton dark_mode;
            private JLabel name , pass , title ;
@@ -61,22 +61,22 @@ public class Login implements ActionListener
      f.getContentPane().setBackground(mycolor);
   
 
-    } 
     
-	
-	 public void actionPerformed(ActionEvent e)
-   {
-  
-
-       if((e.getSource()).equals(dark_mode))
-      {
-        f.setVisible(false);
-          new Homepage();
-          //checking main aksjaskop-abujh
-      }
-
-   }  
+    
+	 enter.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+       login();
+     f.setVisible(false);
+    }
+  });
+   }
    
+public void login()
+{
+
+
+   
+}
    public static void main(String [] args)
    {
 new Login();
