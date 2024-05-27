@@ -77,7 +77,7 @@ public class Login
 	 enter.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
        login();
-     f.setVisible(false);
+   //  f.setVisible(false);
     }
   });
 
@@ -93,13 +93,16 @@ back.addActionListener(new ActionListener() {
    
 public void login()
 {
-   String email = name_field.getText();
+   String name= name_field.getText();
    String password =  new String ( pass_field.getPassword());
       
-   String file = ".\\Data\\userdata.txr";
+   String file = ".\\Data\\userdata.txt";
    
         try {
 
+
+
+         String a,b;
             BufferedReader reader = new BufferedReader(new FileReader(file));
             int totalLines = 0;
             while (reader.readLine() != null)
@@ -107,13 +110,36 @@ public void login()
             reader.close();
            for(int i = 0; i< totalLines; i++ )
            {
-            String line = Files.readAllLines(Paths.get(file)).get(i);
-            String x = line.substring(0,4);
-            if(x equals())  
-           }   
+              
+               String line = Files.readAllLines(Paths.get(file)).get(i);
+               String x = line.substring(0,5);
+               String y = line.substring(0,9);
+          //      if(x.equals("Name:"))  
+                {
+          //        a = line.substring(6,7);
+
+                }
+        //         if(y.equals("password:"))
+         //        
+                {
+          //        b = line.substring(11,12);
+//
+          //      }
+           } }
+           
+           if(name.equals("a")&&password.equals("a"))
+           {
+                new userReg();
+           }
+           else
+           {
+            JOptionPane.showMessageDialog(f, "Something went wrong while reading from Database.", "Error",
+            JOptionPane.ERROR_MESSAGE);
+           }
 
 
-        } catch (IOException ex)
+       } 
+        catch (IOException ex)
         {
          return;
         }

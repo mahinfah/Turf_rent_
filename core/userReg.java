@@ -132,11 +132,11 @@ public class userReg
             
             
             try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file, true)))) {
-                out.println("Name: " + name);
+                out.println("Name:" + name);
              
-                out.println("Nid no: " + nid);
-                out.println("Phone: " + phone);
-                out.println("password: " + password);
+                out.println("Nid no:" + nid);
+                out.println("Phone:" + phone);
+                out.println("password:" + password);
                 //out.println("Password: " + pass);
                 //out.println("Type: patient");
                 out.println("=====================================");

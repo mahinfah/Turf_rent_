@@ -1,10 +1,5 @@
-Name: mahin
-Nid no: 01293238234
-Phone: 01312027780
-password: sad
-=====================================
-Name: mahin
-Nid no: 12121332
-Phone: 01762812910
-password: sad
+Name:a
+Nid no:a
+Phone:a
+password:a
 =====================================
