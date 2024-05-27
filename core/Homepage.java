@@ -4,7 +4,7 @@ import java.awt.event.*;
 import java.awt.*;  
 import javax.swing.*; 
 import java.util.*;
-//import gfgf
+
 public class Homepage implements ActionListener {
     private JFrame f;
     private JButton dark_mode,admin,registration,signin;

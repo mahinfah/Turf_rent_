@@ -6,11 +6,11 @@ import java.awt.event.*;
 
 public class Login 
 {         private JFrame f;
-           private JButton dark_mode;
-           private JLabel name , pass , title ;
-           private JTextField name_field ;
-           private JPasswordField pass_field;
-           private JButton enter ;
+          private JButton dark_mode;
+          private JLabel name , pass , title ;
+          private JTextField name_field ;
+          private JPasswordField pass_field;
+          private JButton enter ;
 
    public Login() 
    {   
