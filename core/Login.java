@@ -98,38 +98,15 @@ public void login()
       
    String file = ".\\Data\\userdata.txt";
    
-        try {
-
-
-
-         String a,b;
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            int totalLines = 0;
-            while (reader.readLine() != null)
-                totalLines++;
-            reader.close();
-           for(int i = 0; i< totalLines; i++ )
-           {
-              
-               String line = Files.readAllLines(Paths.get(file)).get(i);
-               String x = line.substring(0,5);
-               String y = line.substring(0,9);
-          //      if(x.equals("Name:"))  
-                {
-          //        a = line.substring(6,7);
-
-                }
-        //         if(y.equals("password:"))
-         //        
-                {
-          //        b = line.substring(11,12);
-//
-          //      }
-           } }
+        
            
            if(name.equals("a")&&password.equals("a"))
            {
-                new userReg();
+
+            JOptionPane.showMessageDialog(f, "Login Successful", "loginSuccessfull",
+            JOptionPane.INFORMATION_MESSAGE);
+            new userReg();
+
            }
            else
            {
@@ -138,12 +115,8 @@ public void login()
            }
 
 
-       } 
-        catch (IOException ex)
-        {
-         return;
-        }
-
+      
+   
 }
    public static void main(String [] args)
    {
