@@ -2,6 +2,11 @@ package core ;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 public class Login 
@@ -10,7 +15,7 @@ public class Login
           private JLabel name , pass , title ;
           private JTextField name_field ;
           private JPasswordField pass_field;
-          private JButton enter ;
+          private JButton enter , back ;
 
    public Login() 
    {   
@@ -30,14 +35,14 @@ public class Login
 
 
 
-     name = new JLabel("NAME");
-     name.setBounds(270,150,80,30);
+     name = new JLabel("USERNAME");
+     name.setBounds(255,180,180,30);
      name.setFont(font1);
      name.setBackground(mycolor);
      f.add(name);
 
      name_field = new JTextField();
-     name_field.setBounds(400,150,160,30);
+     name_field.setBounds(400,180,160,30);
      
      f.add(name_field);
            
@@ -55,6 +60,12 @@ public class Login
       enter.setBounds(356,360,80,30);
       f.add(enter);       
    
+      
+      back = new JButton("Back");
+      back.setBounds(600,530,80,30);
+      f.add(back);       
+   
+
      f.setSize(700,600);
      f.setLayout(null);
      f.setVisible(true);
@@ -69,13 +80,44 @@ public class Login
      f.setVisible(false);
     }
   });
+
+      
+back.addActionListener(new ActionListener() {
+   public void actionPerformed(ActionEvent e) {
+    new Homepage();
+  f.setVisible(false);
+ }
+});
+
    }
    
 public void login()
 {
-
-
+   String email = name_field.getText();
+   String password =  new String ( pass_field.getPassword());
+      
+   String file = ".\\Data\\userdata.txr";
    
+        try {
+
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            int totalLines = 0;
+            while (reader.readLine() != null)
+                totalLines++;
+            reader.close();
+           for(int i = 0; i< totalLines; i++ )
+           {
+            String line = Files.readAllLines(Paths.get(file)).get(i);
+            String x = line.substring(0,4);
+            if(x equals())
+           }   
+
+
+        } catch (IOException ex)
+        {
+         return;
+        }
+
 }
    public static void main(String [] args)
    {
