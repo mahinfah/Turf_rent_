@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 public class Dashboard 
 {
+    private  String yname;
     private JFrame f;
     private JButton dark_mode,back;
     private JLabel name , pass , title ;
@@ -72,7 +73,7 @@ public class Dashboard
     
 	 enter.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-      // login();
+      login();
    //  f.setVisible(false);
     }
   });
@@ -86,5 +87,12 @@ back.addActionListener(new ActionListener() {
 });
 
    }
+//User use = new User();
+public void login() {
+    User user = new User(); // Create an instance of the User class
+    String userName = user.getName(); // Call the getName() method
+    JOptionPane.showMessageDialog(null, "Welcome, " + user.getName()+ "!");
 
+
+}
 }

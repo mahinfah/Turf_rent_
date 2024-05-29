@@ -16,7 +16,15 @@ public class User {
         this.password = password;
         this.repassword = repassword;
     }    
+    public User()
+    {
 
+    }
+
+    public void setName()
+    {
+        this.name=name;
+    }
     public String getName() {
         return name;
     }
