@@ -105,7 +105,7 @@ public void login()
 
             JOptionPane.showMessageDialog(f, "Login Successful", "loginSuccessfull",
             JOptionPane.INFORMATION_MESSAGE);
-            new userReg();
+            new Dashboard();
 
            }
            else
