@@ -121,6 +121,8 @@ public class userReg
              String phone = phone_field.getText();
              String password = new String(pass_field.getPassword());
              String repassword = new String(repass_field.getPassword());
+              
+             User user = new User (name, nid, phone, password, repassword);
 
   try {
 
@@ -132,13 +134,12 @@ public class userReg
             
             
             try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file, true)))) {
-                out.println("Name:" + name);
+                out.println("Name:" + user.getName());
              
-                out.println("Nid no:" + nid);
-                out.println("Phone:" + phone);
-                out.println("password:" + password);
-                //out.println("Password: " + pass);
-                //out.println("Type: patient");
+                out.println("Nid no:" + user.getnid());
+                out.println("Phone:" + user.getPhone());
+                out.println("password:" + user.getPassword());
+                out.println("Repassword:" + user.getRepassword());
                 out.println("=====================================");
             }
              check = true ;
