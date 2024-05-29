@@ -3,3 +3,9 @@ Nid no:a
 Phone:a
 password:a
 =====================================
+Name:sajni
+Nid no:laptata
+Phone:lapata
+password:joya
+Repassword:joya
+=====================================
