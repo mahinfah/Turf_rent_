@@ -139,7 +139,7 @@ public class Admin{
 
         try {
 			
-            File file = new File("./database/Admins.txt");
+            File file = new File("./Data/Admins.txt");
             if (!file.exists()) {
                 JOptionPane.showMessageDialog(f, "No user registered yet!");
                 return;

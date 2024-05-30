@@ -2,7 +2,10 @@ package core;
 import java.io.*;
 import java.awt.event.*;
 import java.awt.*;  
-import javax.swing.*; 
+import javax.swing.*;
+
+import admin.Admin;
+
 import java.util.*;
 
 public class Homepage implements ActionListener {
@@ -62,6 +65,7 @@ public class Homepage implements ActionListener {
      dark_mode.addActionListener(this);
      registration.addActionListener(this);
      signin.addActionListener(this);
+     admin.addActionListener(this);
      
      
      f.setSize(700,600);
@@ -100,6 +104,16 @@ public class Homepage implements ActionListener {
           f.setVisible(false);
             new Login();
         }
+
+       
+
+        if((e.getSource()).equals(admin))
+        {
+          f.setVisible(false);
+            new Admin();
+        }
+
+
 
 
      }  

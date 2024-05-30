@@ -184,7 +184,7 @@ public class Adminupdate {
         Adminuser newUser = new Adminuser(name, password, email);// why?
 
         try {
-            FileWriter writer = new FileWriter("./database/Admins.txt", true);
+            FileWriter writer = new FileWriter("./Data/Admins.txt", true);
             writer.write(newUser.getUsername() + "," + newUser.getEmail() + "," + newUser.getPass() + "\n");
             writer.close();
             JOptionPane.showMessageDialog(frame, "Registration Successful!");
@@ -224,4 +224,10 @@ public class Adminupdate {
         passwordField.setText("");
 
     }
+
+    public static void main( String [] args)
+    {
+        new Adminupdate();
+    }
+
 }
