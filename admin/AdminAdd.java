@@ -241,6 +241,7 @@ pass.setFont(f2);
                     JOptionPane.showMessageDialog(null, "Please fill all of the fields.", "Something Went Wrong!",
                             JOptionPane.WARNING_MESSAGE);
                 } else {
+                    turf_info turf = new  turf_info(ownername ,  turfname, emailinfo, phoneinfo , Locationinfo ,Durationinfo, Rentinfo);
 
                     try {
                         File file = new File("./Data/Turf_info.txt");

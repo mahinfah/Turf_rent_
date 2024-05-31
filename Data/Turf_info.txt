@@ -6,3 +6,11 @@ Location: s
 Duration: s
 Rent: s
 =====================================
+Ownername: mahin
+Email: jaff
+phone: 01312027780
+email: mahinfah1234@gmail.com
+Location: uttara
+Duration: 1hour
+Rent: 5000
+=====================================
