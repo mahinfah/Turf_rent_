@@ -1,10 +1,8 @@
-Specialization: e
-Name: sa
-Username: as
-Email: sa@gmail.com
-Phone: 3
-License: s
-College: s
-Graduation Year: 
-Password: 
+Ownername: s
+Email: s
+phone: s
+email: s
+Location: s
+Duration: s
+Rent: s
 =====================================

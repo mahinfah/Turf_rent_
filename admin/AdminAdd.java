@@ -15,7 +15,7 @@ public class AdminAdd extends JFrame {
     private ImageIcon icon;
     private JLabel label1,label2;
     private Font f1, f2, f3, f4, f5, f6;
-    private JTextField tf1, tf2, tf3,tf4,tf5,l,clg,graduation,pass;
+    private JTextField tname, oname, email,tf4,duration,rent,location,phone,l,clg,graduation,pass;
     private JButton btn1, btn2, nBtn;
     
     private Cursor cursor;
@@ -39,7 +39,7 @@ public class AdminAdd extends JFrame {
 
         // Fonts
         f1 = new Font("Montserrat", Font.BOLD, 30);
-        f2 = new Font("Montserrat", Font.BOLD, 15);
+        f2 = new Font("serif", Font.BOLD, 25);
         f3 = new Font("Montserrat", Font.BOLD, 15);
         f4 = new Font("Montserrat", Font.BOLD, 15);
         f5 = new Font("Montserrat", Font.BOLD,15);
@@ -64,10 +64,10 @@ label1.setBounds(400, 195, 100, 25);
 label1.setFont(f4);
 c.add(label1);
 
-tf5 = new JTextField();
-tf5.setBounds(510, 195, 160, 30);
-tf5.setFont(f5);
-c.add(tf5);
+oname= new JTextField();
+oname.setBounds(510, 195, 160, 30);
+oname.setFont(f5);
+c.add(oname);
 
 
         label1 = new JLabel();
@@ -77,10 +77,10 @@ c.add(tf5);
         label1.setFont(f4);
         c.add(label1);
 
-        tf1 = new JTextField();
-        tf1.setBounds(510, 245, 160, 30);
-        tf1.setFont(f5);
-        c.add(tf1);
+        tname = new JTextField();
+        tname.setBounds(510, 245, 160, 30);
+        tname.setFont(f5);
+        c.add(tname);
 
 
         // Email
@@ -91,10 +91,10 @@ c.add(tf5);
         label1.setFont(f4);
         c.add(label1);
 
-        tf2 = new JTextField();
-        tf2.setBounds(510, 290, 160, 30);
-        tf2.setFont(f5);
-        c.add(tf2);
+        email = new JTextField();
+        email.setBounds(510, 290, 160, 30);
+        email.setFont(f5);
+        c.add(email);
 
         // Phone
         label1 = new JLabel();
@@ -104,37 +104,37 @@ c.add(tf5);
         label1.setFont(f4);
         c.add(label1);
 
-        tf3 = new JTextField();
-        tf3.setBounds(510,335, 160, 30);
-        tf3.setFont(f2);
-        c.add(tf3);
+        phone = new JTextField();
+        phone.setBounds(510,335, 160, 30);
+        phone.setFont(f2);
+        c.add(phone);
 
 //field
         label1 = new JLabel();
-        label1.setForeground(Color.WHITE);
+        label1.setForeground(Color.BLACK);
         label1.setText("Location");
         label1.setBounds(400, 380, 100, 25);
         label1.setFont(f4);
         c.add(label1);
 
-        tf4 = new JTextField();
-        tf4.setBounds(510,380, 160, 30);
-        tf4.setFont(f2);
+        location = new JTextField();
+        location.setBounds(510,380, 160, 30);
+        location.setFont(f2);
         
-        c.add(tf4);
+        c.add(location);
 //licence
 label1 = new JLabel();
 label1.setForeground(Color.BLACK);
-label1.setText("Duratio");
-label1.setBounds(400, 425, 100, 25);
+label1.setText("Duration");
+label1.setBounds(385, 425, 100, 25);
 label1.setFont(f4);
 c.add(label1);
 
-l = new JTextField();
-l.setBounds(510,425, 160, 30);
-l.setFont(f2);
+duration = new JTextField();
+duration.setBounds(510,425, 160, 30);
+duration.setFont(f2);
 
-c.add(l);
+c.add(duration);
 
 //clg
 
@@ -145,11 +145,11 @@ label1.setBounds(400, 470, 100, 25);
 label1.setFont(f4);
 c.add(label1);
 
-clg = new JTextField();
-clg.setBounds(510,470, 160, 30);
-clg.setFont(f2);
+rent  = new JTextField();
+rent.setBounds(510,470, 160, 30);
+rent.setFont(f2);
 
-c.add(clg);
+c.add(rent);
 //graduation
 
 label1 = new JLabel();
@@ -225,17 +225,18 @@ pass.setFont(f2);
         // Register Button
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                String textField5 = tf4.getText().toLowerCase(); //field
-                String textField1 = tf5.getText().toLowerCase(); //  Name
-                String textField2 = tf1.getText(); // User Name
-                String textField3 = tf2.getText(); // Email
-                String textField4 = tf3.getText(); // Phone
-                String textField6=  l.getText();// license
-                String textField7=  clg.getText();//
-                String textField8=  graduation.getText();
-                String textField9=  pass.getText();
+                String ownername = oname.getText();
+          
+                String turfname = tname.getText();
 
-                if (textField1.isEmpty() || textField2.isEmpty() )
+                String emailinfo = email.getText();
+                String phoneinfo= phone.getText();
+                String Locationinfo= location.getText();
+                String Durationinfo= duration.getText();
+                String Rentinfo= rent.getText();
+
+
+                if (ownername.isEmpty() || turfname.isEmpty() || emailinfo.isEmpty() || phoneinfo.isEmpty())
                       {
                     JOptionPane.showMessageDialog(null, "Please fill all of the fields.", "Something Went Wrong!",
                             JOptionPane.WARNING_MESSAGE);
@@ -252,15 +253,15 @@ pass.setFont(f2);
 
                   
 
-                        pw.println("Specialization: " + textField5);
-                        pw.println("Name: " + textField1);
-                         pw.println("Username: " + textField2);
-                         pw.println("Email: " + textField3);
-                         pw.println("Phone: " + textField4);
-                         pw.println("License: " + textField6);
-                         pw.println("College: " + textField7);
-                         pw.println("Graduation Year: " + textField8);
-                         pw.println("Password: " + textField9);
+                        pw.println("Ownername: " + ownername);
+                         pw.println("Email: " + turfname);
+                         pw.println("phone: " + phoneinfo);
+                         pw.println("email: " + emailinfo);
+                         pw.println("Location: " + Locationinfo);
+                         pw.println("Duration: " + Durationinfo);
+                         pw.println("Rent: " + Rentinfo);
+                         
+                       
                          pw.println("=====================================");
                          pw.close();
 
