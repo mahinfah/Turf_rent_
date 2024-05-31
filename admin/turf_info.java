@@ -1,15 +1,14 @@
 package admin;
 
 public class turf_info {
-    private String turfname;
-    private String ownername;
+ String turfname ;
+ String ownername;
     
-    private    String emailinfo;
-    private   String phoneinfo;
-    private   String Locationinfo;
-       private    String Durationinfo;
+   String emailinfo;  String phoneinfo;
+      String Locationinfo;
+    String Durationinfo;
                
-    private String Rentinfo;
+   String Rentinfo;
 
     turf_info(String ownername, String turfname, String emailinfo, String phoneinfo , String Locationinfo ,String Durationinfo,
                String Rentinfo)
@@ -23,14 +22,15 @@ public class turf_info {
                 this.Rentinfo = Rentinfo;
                }
 
- public String getTurfname(String turfname)
+ public String getTurfname()
 {
+    System.out.println("sssss");
     return turfname;
 }
 
-public String getRentinfo(String Rentinfo)
-{
-    return Rentinfo;
+public String getRentinfo()
+{     System.out.println("success");  
+  return Rentinfo;
 }
 
 public String getLocationinfo(String Locationinfo)
@@ -42,5 +42,8 @@ public String getDurationinfo(String Durationinfo)
     return Durationinfo;
 }
 
+ public static void main(String[] args)
+ {
 
+ }
 }

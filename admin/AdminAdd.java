@@ -241,6 +241,7 @@ pass.setFont(f2);
                     JOptionPane.showMessageDialog(null, "Please fill all of the fields.", "Something Went Wrong!",
                             JOptionPane.WARNING_MESSAGE);
                 } else {
+                    
                     turf_info turf = new  turf_info(ownername ,  turfname, emailinfo, phoneinfo , Locationinfo ,Durationinfo, Rentinfo);
 
                     try {
@@ -255,7 +256,7 @@ pass.setFont(f2);
                   
 
                         pw.println("Ownername: " + ownername);
-                         pw.println("Email: " + turfname);
+                        pw.println("turfname: " + turf.getTurfname());
                          pw.println("phone: " + phoneinfo);
                          pw.println("email: " + emailinfo);
                          pw.println("Location: " + Locationinfo);
