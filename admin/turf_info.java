@@ -1,7 +1,7 @@
 package admin;
 
 public class turf_info {
- String turfname ;
+private String turfname ;
  String ownername;
     
    String emailinfo;  String phoneinfo;
@@ -20,6 +20,10 @@ public class turf_info {
                 this.Locationinfo = Locationinfo;
                 this.Durationinfo= Durationinfo;
                 this.Rentinfo = Rentinfo;
+               }
+               turf_info()
+               {
+                
                }
 
  public String getTurfname()
@@ -41,7 +45,11 @@ public String getDurationinfo(String Durationinfo)
 {
     return Durationinfo;
 }
+public void turfname()
 
+{
+    this.turfname = turfname;
+}
  public static void main(String[] args)
  {
 
