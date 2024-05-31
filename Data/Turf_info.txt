@@ -1,0 +1,10 @@
+Specialization: e
+Name: sa
+Username: as
+Email: sa@gmail.com
+Phone: 3
+License: s
+College: s
+Graduation Year: 
+Password: 
+=====================================

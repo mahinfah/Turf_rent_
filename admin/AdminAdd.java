@@ -48,22 +48,18 @@ public class AdminAdd extends JFrame {
         // Title
         label1 = new JLabel();
         label1.setText("ADD DOCTOR");
-		label1.setForeground(Color.WHITE);
+		label1.setForeground(Color.BLACK);
         label1.setBounds(300, 30, 400, 30);
         label1.setFont(f1);
         c.add(label1);
 
 
-        ImageIcon image = new ImageIcon("./img/doctorreg.png");
-         label2 = new JLabel(image);
-         label2.setBounds(0,100,345,545);
-         c.add(label2);         
-         
+       
         // User Name
 
 label1 = new JLabel();
 label1.setText("Name");
-label1.setForeground(Color.WHITE);
+label1.setForeground(Color.BLACK);
 label1.setBounds(400, 195, 100, 25);
 label1.setFont(f4);
 c.add(label1);
@@ -75,8 +71,8 @@ c.add(tf5);
 
 
         label1 = new JLabel();
-        label1.setText("User Name");
-		label1.setForeground(Color.WHITE);
+        label1.setText("Turf name");
+		label1.setForeground(Color.BLACK);
         label1.setBounds(400, 245, 100, 25);
         label1.setFont(f4);
         c.add(label1);
@@ -90,7 +86,7 @@ c.add(tf5);
         // Email
         label1 = new JLabel();
         label1.setText("Email");
-		label1.setForeground(Color.WHITE);
+		label1.setForeground(Color.BLACK);
         label1.setBounds(400, 290, 100, 25);
         label1.setFont(f4);
         c.add(label1);
@@ -102,8 +98,8 @@ c.add(tf5);
 
         // Phone
         label1 = new JLabel();
-		label1.setForeground(Color.WHITE);
-        label1.setText("Phone");
+		label1.setForeground(Color.BLACK);
+        label1.setText("Phone No");
         label1.setBounds(400, 335, 100, 25);
         label1.setFont(f4);
         c.add(label1);
@@ -116,7 +112,7 @@ c.add(tf5);
 //field
         label1 = new JLabel();
         label1.setForeground(Color.WHITE);
-        label1.setText("Field");
+        label1.setText("Location");
         label1.setBounds(400, 380, 100, 25);
         label1.setFont(f4);
         c.add(label1);
@@ -128,8 +124,8 @@ c.add(tf5);
         c.add(tf4);
 //licence
 label1 = new JLabel();
-label1.setForeground(Color.WHITE);
-label1.setText("License");
+label1.setForeground(Color.BLACK);
+label1.setText("Duratio");
 label1.setBounds(400, 425, 100, 25);
 label1.setFont(f4);
 c.add(label1);
@@ -143,8 +139,8 @@ c.add(l);
 //clg
 
 label1 = new JLabel();
-label1.setForeground(Color.WHITE);
-label1.setText("Collage");
+label1.setForeground(Color.BLACK);
+label1.setText("Rent");
 label1.setBounds(400, 470, 100, 25);
 label1.setFont(f4);
 c.add(label1);
@@ -157,32 +153,32 @@ c.add(clg);
 //graduation
 
 label1 = new JLabel();
-label1.setForeground(Color.WHITE);
+label1.setForeground(Color.BLACK);
 label1.setText("Graduation year");
 label1.setBounds(400, 515, 100, 25);
 label1.setFont(f4);
-c.add(label1);
+//c.add(label1);
 
 graduation = new JTextField();
 graduation.setBounds(510,515, 160, 30);
 graduation.setFont(f2);
 
-c.add(graduation);
+//.add(graduation);
 
 //passs
 
 label1 = new JLabel();
-label1.setForeground(Color.WHITE);
+label1.setForeground(Color.BLACK);
 label1.setText("Pass");
 label1.setBounds(400, 560, 100, 25);
 label1.setFont(f4);
-c.add(label1);
+//c.add(label1);
 
 pass = new JTextField();
 pass.setBounds(510,560, 160, 30);
 pass.setFont(f2);
 
-c.add(pass);
+//c.add(pass);
 
 
 
@@ -211,7 +207,11 @@ c.add(pass);
         nBtn = new JButton("");
         nBtn.setBounds(0, 0, 0, 0);
         c.add(nBtn);
-
+ ImageIcon image = new ImageIcon("./img/turrf.png");
+         label2 = new JLabel(image);
+         label2.setBounds(0,0,1000,700);
+         c.add(label2);         
+         
         // Back Button
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
@@ -235,14 +235,14 @@ c.add(pass);
                 String textField8=  graduation.getText();
                 String textField9=  pass.getText();
 
-                if (textField1.isEmpty() || textField2.isEmpty() || textField3.isEmpty()||textField4.isEmpty()||textField5.isEmpty()||textField6.isEmpty()||textField7.isEmpty()||textField8.isEmpty()||textField9.isEmpty())
+                if (textField1.isEmpty() || textField2.isEmpty() )
                       {
                     JOptionPane.showMessageDialog(null, "Please fill all of the fields.", "Something Went Wrong!",
                             JOptionPane.WARNING_MESSAGE);
                 } else {
 
                     try {
-                        File file = new File("./database/Doctors.txt");
+                        File file = new File("./Data/Turf_info.txt");
                         if (!file.exists()) {
                             file.createNewFile();
                         }
