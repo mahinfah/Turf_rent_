@@ -2,7 +2,7 @@ package core;
 
 public class User {
 
-    private String name;
+    private static String username;
     private String nid;
     private String phone;
     private String password;
@@ -10,7 +10,7 @@ public class User {
         
     public User(String name, String nid, String phone , String password , String repassword)
     {
-        this.name = name;
+        this.username = name;
         this.nid = nid ;
         this.phone = phone;
         this.password = password;
@@ -21,15 +21,15 @@ public class User {
 
     }
 
-    public void setName()
+    public static void setName(String name)
     {
-        this.name=name;
+        name=username;
     }
-    public String getName() {
-        return name;
+    public static String getName() {
+        return username;
     }
         public String getnid(){
-            return nid;
+         return nid;
         }
 
         public String getPhone() {
