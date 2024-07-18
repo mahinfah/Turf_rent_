@@ -2,11 +2,11 @@ package core ;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+//import java.io.BufferedReader;
+//import java.io.FileReader;
+//import java.io.IOException;
+//import java.nio.file.Files;
+//import java.nio.file.Paths;
 
 
 public class Login 
@@ -96,7 +96,7 @@ public void login()
    String name= name_field.getText();
    String password =  new String ( pass_field.getPassword());
       
-   String file = ".\\Data\\userdata.txt";
+ //  String file = ".\\Data\\userdata.txt"; // will use later
    
         
            

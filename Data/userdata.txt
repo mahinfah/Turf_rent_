@@ -9,3 +9,9 @@ Phone:lapata
 password:joya
 Repassword:joya
 =====================================
+Name:a
+Nid no:a
+Phone:a
+password:a
+Repassword:a
+=====================================
