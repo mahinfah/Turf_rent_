@@ -11,7 +11,7 @@ import java.util.*;//hghg
 public class Homepage implements ActionListener {
     private JFrame f;
     private JButton dark_mode,admin,registration,signin;
-    private JLabel title,field_gif,fgf,fg;
+    private JLabel title,field_gif,fgf;
     
    public Homepage() 
    {    
