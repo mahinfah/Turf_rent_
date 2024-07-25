@@ -76,3 +76,9 @@ Phone:s
 password:s
 Repassword:s
 =====================================
+Name:a
+Nid no:a
+Phone:a
+password:a
+Repassword:a
+=====================================

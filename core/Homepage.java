@@ -6,12 +6,12 @@ import javax.swing.*;
 
 import admin.Admin;
 
-import java.util.*;
+import java.util.*;//hghg
 
 public class Homepage implements ActionListener {
     private JFrame f;
     private JButton dark_mode,admin,registration,signin;
-    private JLabel title,field_gif;
+    private JLabel title,field_gif,fgf;
     
    public Homepage() 
    {    
