@@ -152,6 +152,7 @@ public class Adminupdate {
             }
         });
         frame.add(Back);
+        frame.setLocationRelativeTo(null);
 
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

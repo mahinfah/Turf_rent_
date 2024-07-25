@@ -57,7 +57,7 @@ public class Homepagedark implements ActionListener {
      signin.setBackground(mycolor3);
      f.add(signin);
  
- 
+  
  
  
  
@@ -68,10 +68,11 @@ public class Homepagedark implements ActionListener {
 
    dark_mode.addActionListener(this);
       f.setSize(700,600);
-    f.setLayout(null);
+      f.setLayout(null);
       f.setVisible(true);
       f.getContentPane().setBackground(mycolor2);
-      
+      f.setLocationRelativeTo(null);
+
 
     }
 

@@ -1,11 +1,78 @@
+Name:safin
+Nid no:12w12
+Phone:12332
+password:s
+Repassword:s
+=====================================
+Name:hardnut
+Nid no:12w12
+Phone:12332
+password:s
+Repassword:safin
+=====================================
+Name:rafin
+Nid no:no nid
+Phone:0128178213981
+password:telapia
+Repassword:telapia
+=====================================
+Name:mahin
+Nid no:1234
+Phone:01312027780
+password:sad
+Repassword:sad
+=====================================
+Name:asa
+Nid no:asa
+Phone:asa
+password:s
+Repassword:s
+=====================================
+Name:sa
+Nid no:sa
+Phone:sa
+password:s
+Repassword:s
+=====================================
+Name:sa
+Nid no:sa
+Phone:sa
+password:s
+Repassword:s
+=====================================
 Name:a
 Nid no:a
 Phone:a
 password:a
+Repassword:a
 =====================================
-Name:sajni
-Nid no:laptata
-Phone:lapata
-password:joya
-Repassword:joya
+Name:a
+Nid no:aa
+Phone:aaa
+password:a
+Repassword:a
+=====================================
+Name:w
+Nid no:w
+Phone:w
+password:w
+Repassword:w
+=====================================
+Name:naeem
+Nid no:1323
+Phone:2323
+password:s
+Repassword:s
+=====================================
+Name:habiba
+Nid no:1234
+Phone:1234
+password:q
+Repassword:q
+=====================================
+Name:safin
+Nid no:s
+Phone:s
+password:s
+Repassword:s
 =====================================

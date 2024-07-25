@@ -3,11 +3,9 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
-import java.lang.*;
+
 import java.io.*;
-import java.nio.file.*;
-import java.time.*;
-import java.time.format.*;
+
 
 public class AdminAdd extends JFrame {
 
@@ -15,7 +13,7 @@ public class AdminAdd extends JFrame {
     private ImageIcon icon;
     private JLabel label1,label2;
     private Font f1, f2, f3, f4, f5, f6;
-    private JTextField tname, oname, email,tf4,duration,rent,location,phone,l,clg,graduation,pass;
+    private JTextField tname, capa, email,tf4,duration,rent,location,phone,l,clg,graduation,pass;
     private JButton btn1, btn2, nBtn;
     
     private Cursor cursor;
@@ -23,18 +21,20 @@ public class AdminAdd extends JFrame {
     AdminAdd() {
         // Frame Layout
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("ADD Doctor");
+        this.setTitle("Add Turf");
         this.setSize(800, 780);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
 
         c = this.getContentPane();
         c.setLayout(null);
-    
+        
+
          c.setBackground(Color.decode("#00416a"));
 
         // Icon
-        icon = new ImageIcon("./img/doctorreg.png");
+        icon = new ImageIcon("./img/turf.png");
         this.setIconImage(icon.getImage());
 
         // Fonts
@@ -47,7 +47,7 @@ public class AdminAdd extends JFrame {
 
         // Title
         label1 = new JLabel();
-        label1.setText("ADD DOCTOR");
+        label1.setText("ADD Turf");
 		label1.setForeground(Color.BLACK);
         label1.setBounds(300, 30, 400, 30);
         label1.setFont(f1);
@@ -58,29 +58,29 @@ public class AdminAdd extends JFrame {
         // User Name
 
 label1 = new JLabel();
-label1.setText("Name");
+label1.setText("Turf Name : ");
 label1.setForeground(Color.BLACK);
 label1.setBounds(400, 195, 100, 25);
 label1.setFont(f4);
 c.add(label1);
 
-oname= new JTextField();
-oname.setBounds(510, 195, 160, 30);
-oname.setFont(f5);
-c.add(oname);
+tname= new JTextField();
+tname.setBounds(510, 195, 160, 30);
+tname.setFont(f5);
+c.add(tname);
 
 
         label1 = new JLabel();
-        label1.setText("Turf name");
+        label1.setText("Capacity :");
 		label1.setForeground(Color.BLACK);
         label1.setBounds(400, 245, 100, 25);
         label1.setFont(f4);
         c.add(label1);
 
-        tname = new JTextField();
-        tname.setBounds(510, 245, 160, 30);
-        tname.setFont(f5);
-        c.add(tname);
+        capa = new JTextField();
+        capa.setBounds(510, 245, 160, 30);
+        capa.setFont(f5);
+        c.add(capa);
 
 
         // Email
@@ -126,7 +126,7 @@ c.add(oname);
 label1 = new JLabel();
 label1.setForeground(Color.BLACK);
 label1.setText("Duration");
-label1.setBounds(385, 425, 100, 25);
+label1.setBounds(400, 425, 100, 25);
 label1.setFont(f4);
 c.add(label1);
 
@@ -207,8 +207,8 @@ pass.setFont(f2);
         nBtn = new JButton("");
         nBtn.setBounds(0, 0, 0, 0);
         c.add(nBtn);
- ImageIcon image = new ImageIcon("./img/turrf.png");
-         label2 = new JLabel(image);
+        ImageIcon image = new ImageIcon("./img/turrf.png");
+        label2 = new JLabel(image);
          label2.setBounds(0,0,1000,700);
          c.add(label2);         
          
@@ -217,17 +217,17 @@ pass.setFont(f2);
             public void actionPerformed(ActionEvent ae) {
 
                 setVisible(false);
-           //     userdata frame = new userdata();
-             //  frame.setVisible(true);
+                new Admindashboard();
+             //   f.setVisible(true);
             }
         });
 
         // Register Button
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                String ownername = oname.getText();
-          
                 String turfname = tname.getText();
+          
+                String capacity = capa.getText();
 
                 String emailinfo = email.getText();
                 String phoneinfo= phone.getText();
@@ -236,14 +236,15 @@ pass.setFont(f2);
                 String Rentinfo= rent.getText();
 
 
-                if (ownername.isEmpty() || turfname.isEmpty() || emailinfo.isEmpty() || phoneinfo.isEmpty())
+                if (capacity.isEmpty() || turfname.isEmpty() || emailinfo.isEmpty() || phoneinfo.isEmpty())
                       {
                     JOptionPane.showMessageDialog(null, "Please fill all of the fields.", "Something Went Wrong!",
                             JOptionPane.WARNING_MESSAGE);
                 } else {
                     
-                    turf_info turf = new  turf_info(ownername ,  turfname, emailinfo, phoneinfo , Locationinfo ,Durationinfo, Rentinfo);
-
+                    turf_info turf = new  turf_info(turfname,capacity, emailinfo, phoneinfo , Locationinfo ,Durationinfo, Rentinfo);
+                       
+                 // System.out.println(admin.turf_info.getTurfname());
                     try {
                         File file = new File("./Data/Turf_info.txt");
                         if (!file.exists()) {
@@ -255,8 +256,9 @@ pass.setFont(f2);
 
                   
 
-                        pw.println("Ownername: " + ownername);
-                        pw.println("turfname: " + turf.getTurfname());
+                         
+                         pw.println("turfname: " + turfname);
+                         pw.println("Capacity: " + capacity);
                          pw.println("phone: " + phoneinfo);
                          pw.println("email: " + emailinfo);
                          pw.println("Location: " + Locationinfo);
@@ -274,8 +276,8 @@ pass.setFont(f2);
                     JOptionPane.showMessageDialog(null, "User has been added.", "User Added",
                             JOptionPane.INFORMATION_MESSAGE);
                     setVisible(false);
-                    AdminAdd frame = new AdminAdd();
-                    frame.setVisible(true);
+                  new Admindashboard();
+                    //frame.setVisible(true);
                 }
             }
         });

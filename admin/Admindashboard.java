@@ -13,7 +13,7 @@ public class Admindashboard{
      private JLabel title,click2,arrow,task,name ,admingif, pass;
      private JTextArea admin_name;
 	 private JPasswordField pass_field;
-	 private JButton back , update_doctor,update_patient,update_admin,Dash_button;
+	 private JButton back , update_turf,update_patient,update_admin,Dash_button;
 
    public Admindashboard()
 	{
@@ -60,11 +60,11 @@ Font f1 = new Font("Montserrat", Font.BOLD, 20);
          update_patient.setForeground(mycolor);
 		 
 		 
-		 update_doctor = new JButton("Upadate Doctor");
-		 update_doctor.setBounds(500,200,200,125);
-	     update_doctor.setBackground(Color.white);
-         update_doctor.setForeground(mycolor);
-		 update_doctor.setFont(f1);
+		 update_turf = new JButton("Upadate Turf");
+		 update_turf.setBounds(500,200,200,125);
+	     update_turf.setBackground(Color.white);
+         update_turf.setForeground(mycolor);
+		 update_turf.setFont(f1);
 	
 		 
 		
@@ -83,9 +83,9 @@ Font f1 = new Font("Montserrat", Font.BOLD, 20);
 		
          back = new JButton("Back");
          back.setBounds(1,2,100,30);
-	back.setBackground(Color.black);
-        back.setForeground(Color.white);
-		
+	     back.setBackground(Color.black);
+         back.setForeground(Color.white);
+		//f.add(back);
 		ImageIcon taskpic = new ImageIcon("./img/task.gif");
  task = new JLabel(taskpic);
  task.setBounds(110,280,115,130); 
@@ -99,10 +99,11 @@ f.add(task);
 			pass_field.setBounds(550,220,150,30);
 	        admin_name.setBounds(550,170,150,30);
 			
-			
+			f.setLocationRelativeTo(null);
+
 			//f.add(Dash_button);
 			f.add(title);
-	f.add(update_doctor);
+	        f.add(update_turf);
 	
 	//f.add(update_patient);
 		f.add(update_admin);
@@ -117,22 +118,17 @@ f.add(task);
         });
 		
 		
-				// Dash_button.addActionListener(new ActionListener() {
-        //    public void actionPerformed(ActionEvent e) {
-        ////        f.dispose();
-          //    new Dashboard();
-        //    }
-       // });
+	
 		
 		
-				 update_doctor.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                f.dispose();
-
-			//	setVisible(true);
-                Userdata frame = new Userdata();
-            frame.setVisible(true);
-             //new Userdata();
+				 update_turf.addActionListener(new ActionListener() {
+               public void actionPerformed(ActionEvent e) {
+        
+			   AdminAdd frame = new AdminAdd();
+			   frame.setVisible(true);
+		   
+             System.out.println("called");
+      
             }
         });
 		

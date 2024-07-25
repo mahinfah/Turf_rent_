@@ -91,13 +91,15 @@ public class userReg
          f.setSize(700,700);
          f.setLayout(null);
          f.setVisible(true);
-     
+         f.setLocationRelativeTo(null);
+
+
          enter.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
             saveuser();
         if(check){
-            new userReg();
-            //f.setVisible();
+            new Homepage();
+            f.setVisible(false);
           }
         }
       });
@@ -117,12 +119,12 @@ public class userReg
       public void saveuser()
       {
              String name = name_field.getText();
-             String  nid = nid_field.getText();
+             String  nidno = nid_field.getText();
              String phone = phone_field.getText();
              String password = new String(pass_field.getPassword());
              String repassword = new String(repass_field.getPassword());
               
-             User user = new User (name, nid, phone, password, repassword);
+             User user = new User (name, nidno, phone, password, repassword);
 
   try {
 
@@ -143,14 +145,15 @@ public class userReg
                 out.println("=====================================");
             }
              check = true ;
-
-
+          //   f.setVisible(false);
+          //   new User();
+   
 
            }  
             catch (Exception e) {
               e.printStackTrace();
             }
-
+            
     }
        public static void main()
        {

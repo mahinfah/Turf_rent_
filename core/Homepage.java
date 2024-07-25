@@ -67,12 +67,13 @@ public class Homepage implements ActionListener {
      signin.addActionListener(this);
      admin.addActionListener(this);
      
-     
+    
+
      f.setSize(700,600);
      f.setLayout(null);
      f.setVisible(true);
      f.getContentPane().setBackground(mycolor);
-  
+   f.setLocationRelativeTo(null);
      
 
     }

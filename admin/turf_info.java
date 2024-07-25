@@ -1,20 +1,20 @@
 package admin;
 
 public class turf_info {
-private String turfname ;
- String ownername;
-    
-   String emailinfo;  String phoneinfo;
-      String Locationinfo;
-    String Durationinfo;
-               
-   String Rentinfo;
+    private  static String turfname ;
+    private  static   String capacity;
+    private  static   String emailinfo; 
+    private  static  String phoneinfo;
+    private  static  String Locationinfo;
+    private  static  String Durationinfo;
+    private  static  String Rentinfo;
 
-    turf_info(String ownername, String turfname, String emailinfo, String phoneinfo , String Locationinfo ,String Durationinfo,
+    turf_info(String turfname,String capacity, String emailinfo, String phoneinfo , String Locationinfo ,String Durationinfo,
                String Rentinfo)
                {
-                this.ownername = ownername;
+              System.out.println("turf_in");
                 this.turfname = turfname;
+                this.capacity = capacity;
                 this.emailinfo = emailinfo;
                 this.phoneinfo = phoneinfo;
                 this.Locationinfo = Locationinfo;
@@ -25,15 +25,20 @@ private String turfname ;
                {
                 
                }
+ 
+ public static void setTurfname(String turfname)
+ {
+turfname =turfname;
+ }              
 
- public String getTurfname()
+ public static String getTurfname()
 {
-    System.out.println("sssss");
+    System.out.println("getturfname callled");
     return turfname;
 }
 
 public String getRentinfo()
-{     System.out.println("success");  
+{    
   return Rentinfo;
 }
 
@@ -48,7 +53,9 @@ public String getDurationinfo(String Durationinfo)
 public void turfname()
 
 {
-    this.turfname = turfname;
+   // this.turfname = turfname;
+  //  System.out.println("CALLED");
+   // System.out.println(turfname);
 }
  public static void main(String[] args)
  {

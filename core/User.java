@@ -3,18 +3,22 @@ package core;
 public class User {
 
     private static String username;
-    private String nid;
-    private String phone;
-    private String password;
-    private String repassword;
+    private static String nidno;
+    private static String phone;
+    private static String password;
+    private static String repassword;
         
-    public User(String name, String nid, String phone , String password , String repassword)
-    {
+    public User(String name, String nidno, String phone , String password , String repassword)
+    {// System.out.println("called"); 
+
         this.username = name;
-        this.nid = nid ;
+        this.nidno = nidno ;
         this.phone = phone;
         this.password = password;
         this.repassword = repassword;
+       // System.out.println(nid); 
+        System.out.println(name); 
+    
     }    
     public User()
     {
@@ -24,12 +28,20 @@ public class User {
     public static void setName(String name)
     {
         name=username;
+        System.out.println("CALLED"+name);
     }
+   
     public static String getName() {
         return username;
     }
-        public String getnid(){
-         return nid;
+    public static void setnid(String nidno)
+    {
+     nidno = nidno;
+        System.out.println("CALLED"+nidno);
+    }
+   //  System.out.println(getName());
+        public static String getnid(){
+         return nidno;
         }
 
         public String getPhone() {
