@@ -294,11 +294,11 @@ e.printStackTrace();
         {
 
          ///  ./// Color mycolor2 = new Color (132,131,183);
-            Color mycolor = new Color(116, 126, 22);
+          //  Color mycolor = new Color(116, 126, 22);
             Color mycolor3 = new Color(66, 16, 22);
 
    System.out.println("called");
-   Color mycolor2 = new Color (132,131,183);
+   //Color mycolor2 = new Color (132,131,183);
    System.out.println("sasasa");
    editable_area.removeAll();
    editable_area.repaint();
@@ -476,6 +476,25 @@ editable_area.add(bkash);
 JButton nogod = new JButton("Nogod");
 nogod.setBounds(310, 260, 80, 30);
 editable_area.add(nogod);
+
+bkash.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+  System.out.println("CAllded basksj);");
+    }
+});
+
+
+nogod.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+     
+    
+
+    }
+});
+
+
+
+
 
   }
 
