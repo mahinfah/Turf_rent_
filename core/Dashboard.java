@@ -505,7 +505,7 @@ editable_area.add(name2);
 
 
 JLabel name23 = new JLabel("Hello "+name+"! Here are the details of your rent :"); 
-name23.setBounds(30, 85, 600, 20);
+name23.setBounds(30, 100, 600, 20);
 name23.setFont(new Font("Arial", Font.ITALIC, 18));
 name23.setForeground(Color.BLACK);
 name23.setBackground(mycolor);
