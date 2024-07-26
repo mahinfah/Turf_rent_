@@ -107,7 +107,7 @@ public class Admin{
 		 back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 f.dispose();
-                new core.Login();
+                new core.Homepage();
             }
         });
 	
