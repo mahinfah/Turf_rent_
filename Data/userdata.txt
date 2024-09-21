@@ -82,3 +82,15 @@ Phone:a
 password:a
 Repassword:a
 =====================================
+Name:m
+Nid no:m
+Phone:m
+password:m
+Repassword:m
+=====================================
+Name:
+Nid no:
+Phone:
+password:
+Repassword:
+=====================================
